@@ -1,0 +1,27 @@
+.Emi{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.ETableCellText{
+    background-color: midnightblue;
+    color: white !important;
+    font-size: 16px !important;
+}
+.ETableCellVal{
+    text-align: right !important;
+    font-size: 18px !important;
+}
+.CalApp{
+    width: 50%;
+    border: 2px #CCC solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    background-color :peachpuff;
+}
+.CalHeading{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: purple;
+}
