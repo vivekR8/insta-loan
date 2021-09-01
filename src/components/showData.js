@@ -9,7 +9,7 @@ class ShowData extends React.Component{
     render(){
     return( <div>
         <div>
-            {console.log("console",(this.props.val[0].address))}
+            {/* {console.log("console",(this.props.val[0].address))} */}
             
              {this.props.val && this.props.val.length>0 &&  this.props.val.map((item)=>{
                     return <div>{item.address}</div>

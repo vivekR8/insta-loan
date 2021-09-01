@@ -11,8 +11,8 @@ class LoanDetails extends React.Component{
     }
     
     handleClick=()=>{
-        axios.get(`http://localhost:8090/home-loan`).then(
-            (res)=>{console.log(res.data)
+        axios.get(`${API}/home-loan/`).then(
+            (res)=>{console.log(res)
             this.setState({loanDetails:res.data})}
         ).catch((err)=>console.log(err))
     }
