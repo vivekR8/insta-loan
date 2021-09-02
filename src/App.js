@@ -45,10 +45,11 @@ class  App extends React.Component{
   return (
     <div className="App">
       {this.state.isLoggedIn?
-          <Router>
-             <Sidebar style={{height:'100%'}} />
+          <Router >
+          <div className="route">
+             <Sidebar  />
               <div 
-              // className="wrapper" 
+               className="wrapper" 
                 style={{width:'70%'}}>
                   
                  
@@ -57,6 +58,7 @@ class  App extends React.Component{
                   <Route exact path="/apply-loan" component={ApplyLoan}/>
                   <Route exact path="/loan-status" component={Dashboard}/>
                   <Route exact path="/emi-calculator" component={EmiCalculator}/>
+              </div>
               </div>
           </Router>
         :
