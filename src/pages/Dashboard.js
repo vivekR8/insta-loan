@@ -2,6 +2,7 @@ import React from 'react';
 import UserDetailsCard from '../components/UserDetailsCard';
 import '../App.css';
 import HomeLoanCard from '../components/HomeLoanCard';
+import GoldLoanCard from '../components/GoldLoanCard'
 
 class Dashboard extends React.Component{
     render(){
@@ -13,6 +14,10 @@ class Dashboard extends React.Component{
                 <div className="card">
                 {userData.homeLoans.length>0 && userData.homeLoans.map((data)=>{
                     return <HomeLoanCard {...data}/>
+                })}
+                {userData.goldLoans.length>0 && 
+                userData.goldLoans.map((data)=>{
+                    return <GoldLoanCard {...data}/>
                 })}
                 </div>
                 
