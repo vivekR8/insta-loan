@@ -51,7 +51,7 @@ export default function UserDetailsCard(props) {
     console.log("card",props.userData)
   return (
     <Card className={classes.root}>
-        <h2 className={classes.h2}>Home Loan</h2>
+        <h2 className={classes.h2}>Vehicle Loan</h2>
         <span className={classes.wrap}>
             
             <CardContent>
@@ -81,14 +81,23 @@ export default function UserDetailsCard(props) {
                         {bull}
                         <div>{props.endDate}</div>
                     </Typography>
+
+
+
                     <Typography className={classes.pos} variant="body2" component="p">
-                        <div className={classes.pad}>Address &nbsp;&nbsp;</div>
+                        <div className={classes.pad}>Vehicle Type &nbsp;&nbsp;</div>
                         {bull}
-                        <div>Address :{props.address}
-                        <br />
-                        Area :{props.area}
-                        </div>
+                        <div>{props.vehicleType}</div>
                     </Typography>
+
+                    <Typography className={classes.pos} variant="body2" component="p">
+                        <div className={classes.pad}>Owner Details &nbsp;&nbsp;</div>
+                        {bull}
+                        <div>{props.ownerDetails}</div>
+                    </Typography>
+
+
+
                     <Typography className={classes.pos} >
                         <div className={classes.pad}>Interest</div>
                         {bull}
