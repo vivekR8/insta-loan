@@ -12,6 +12,7 @@ import axios from 'axios';
 import {API} from './constants';
 import './App.css';
 import EmiCalculator from './pages/EmiCalculator';
+import ApplyLoan from './pages/ApplyLoan'
 
 class  App extends React.Component{
   constructor(props){
@@ -45,7 +46,7 @@ class  App extends React.Component{
                   <Sidebar />
                   <Route exact path="/"><Dashboard userData={userData} /></Route>
                   <Route exact path="/loan-details" ><LoanDetails valueId={100}/></Route>
-                  <Route exact path="/apply-loan" component={Dashboard}/>
+                  <Route exact path="/apply-loan" component={ApplyLoan}/>
                   <Route exact path="/loan-status" component={Dashboard}/>
                   <Route exact path="/emi-calculator" component={EmiCalculator}/>
               </div>
