@@ -9,6 +9,8 @@ import Dashboard from './pages/Dashboard';
 import Sidebar from './components/SideBar';
 // import LoanDetails from './pages/LoanDetials';
 import './App.css';
+import EMI from './pages/EmiCalculator';
+import EmiCalculator from './pages/EmiCalculator';
 
 class  App extends React.Component{
 
@@ -24,7 +26,7 @@ class  App extends React.Component{
               <Route exact path="/loan-details" component={Dashboard}/>
               <Route exact path="/apply-loan" component={Dashboard}/>
               <Route exact path="/loan-status" component={Dashboard}/>
-              <Route exact path="/emi-calculator" component={Dashboard}/>
+              <Route exact path="/emi-calculator" component={EmiCalculator}/>
           </div>
       </Router>
     </div>
