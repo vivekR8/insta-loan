@@ -12,7 +12,8 @@ import axios from 'axios';
 import {API} from './constants';
 import './App.css';
 import EmiCalculator from './pages/EmiCalculator';
-import ApplyLoan from './pages/ApplyLoan'
+import ApplyLoan from './pages/ApplyLoan';
+import LoginPage from './pages/LoginPage';
 
 class  App extends React.Component{
   constructor(props){
@@ -25,13 +26,17 @@ class  App extends React.Component{
     };
   }
 
- getUserDetails=()=>{
+ getUserDetails=(id)=>{
+    this.setState({isLoggedIn:true,userId:id},
+      ()=>{
+
    const {userId}=this.state;
    console.log(userId);
    axios.get(`${API}/user/${userId}`).then(
       (res)=>{
       this.setState({userData:res.data})
     }).catch((err)=>console.log(err))
+  })
  }
 
   render(){
@@ -41,9 +46,12 @@ class  App extends React.Component{
     <div className="App">
       {this.state.isLoggedIn?
           <Router>
-              <div className="wrapper">
+             <Sidebar style={{height:'100%'}} />
+              <div 
+              // className="wrapper" 
+                style={{width:'70%'}}>
                   
-                  <Sidebar />
+                 
                   <Route exact path="/"><Dashboard userData={userData} /></Route>
                   <Route exact path="/loan-details" ><LoanDetails valueId={100}/></Route>
                   <Route exact path="/apply-loan" component={ApplyLoan}/>
@@ -52,8 +60,9 @@ class  App extends React.Component{
               </div>
           </Router>
         :
-        <button onClick={()=>{this.setState({isLoggedIn:true,userId:134},()=>this.getUserDetails())}}>LOG IN</button>
+        <LoginPage loginById={this.getUserDetails} />
         }
+        
     </div>
   );
   }

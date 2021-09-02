@@ -5,8 +5,12 @@ import { useHistory } from "react-router-dom";
 function Sidebar(){
     let history = useHistory();
 
-    return <div className="Sidebar">
-        <ul className="SidebarList">
+    return <div 
+    className="Sidebar"
+    style={{width:'30%'}}
+    >
+        <ul 
+        className="SidebarList">
             {
                 SidebarData.map((val,key)=>{
                     return (

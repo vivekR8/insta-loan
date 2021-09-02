@@ -6,7 +6,7 @@
 }
 
 .SidebarList{
-    height: auto;
+    height: 100%;
     padding: 0%;
     width: 100%;
 }
@@ -20,7 +20,7 @@
     flex-direction: row;
     color: white;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .SidebarList :hover{
