@@ -20,27 +20,27 @@ const Example = (props) => {
         <div style={{margin: "10px", display: "flex", justifyContent: "space-between", width: "500px"}}>
         <FormGroup check>
           <Label check>
-            <Input type="radio" name="goldloanradio" />{' '}
+            <Input type="radio" name="radio1" />{' '}
             Gold Loan
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="radio" name="homeloanradio" />{' '}
-            Home Loan
+            <Input type="radio" name="radio1" />{' '}
+           Home Loan
           </Label>
         </FormGroup>
         </div>
         <div style={{margin: "10px", display: "flex", justifyContent: "space-between", width: "527px"}}>
         <FormGroup check>
           <Label check>
-            <Input type="radio" name="vehicleloanradio" />{' '}
+            <Input type="radio" name="radio1" />{' '}
             Vehicle Loan
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="radio" name="educationloanradio" />{' '}
+            <Input type="radio" name="radio1" />{' '}
             Education Loan
           </Label>
         </FormGroup>
