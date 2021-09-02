@@ -15,8 +15,8 @@ const PrettoSlider=withStyles({
 
 function EmiCalculator()
 {   const[pAmount,setpAmount]=useState(50000);
-    const[interest,setinterest]=useState(7);
-    const[duration,setDuration]=useState(147);
+    const[interest,setinterest]=useState(10);
+    const[duration,setDuration]=useState(60);
     const maxValue=1500000;
     const intMax=20;
     const maxDuration=360;
