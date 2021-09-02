@@ -2,7 +2,11 @@ import React from 'react';
 import UserDetailsCard from '../components/UserDetailsCard';
 import '../App.css';
 import HomeLoanCard from '../components/HomeLoanCard';
-import GoldLoanCard from '../components/GoldLoanCard'
+
+
+
+import VehicleLoanCard from '../components/VehicleLoanCard';
+
 
 class Dashboard extends React.Component{
     render(){
@@ -18,6 +22,12 @@ class Dashboard extends React.Component{
                 {userData.goldLoans.length>0 && 
                 userData.goldLoans.map((data)=>{
                     return <GoldLoanCard {...data}/>
+                })}
+                </div>
+
+                <div className="card">
+                {userData.vehicleLoans.length>0 && userData.vehicleLoans.map((data)=>{
+                    return <VehicleLoanCard {...data}/>
                 })}
                 </div>
                 
