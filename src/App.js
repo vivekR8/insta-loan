@@ -14,6 +14,7 @@ import './App.css';
 import EmiCalculator from './pages/EmiCalculator';
 import ApplyLoan from './pages/ApplyLoan';
 import LoginPage from './pages/LoginPage';
+import LoanStatus from './pages/LoanStatus';
 
 class  App extends React.Component{
   constructor(props){
@@ -56,7 +57,7 @@ class  App extends React.Component{
                   <Route exact path="/"><Dashboard userData={userData} /></Route>
                   <Route exact path="/loan-details" ><Dashboard userData={userData} /></Route>
                   <Route exact path="/apply-loan" component={ApplyLoan}/>
-                  <Route exact path="/loan-status" component={Dashboard}/>
+                  <Route exact path="/loan-status" component={LoanStatus}/>
                   <Route exact path="/emi-calculator" component={EmiCalculator}/>
               </div>
               </div>
