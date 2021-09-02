@@ -9,8 +9,9 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     minWidth: 200,
-    width:"60vw",
-    paddingTop:15
+    width:"65vw",
+    paddingTop:15,
+    marginBottom:"20px"
   },
   wrap:{
     display:"flex",
