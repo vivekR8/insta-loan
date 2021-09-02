@@ -1,15 +1,21 @@
 import React from 'react';
 import UserDetailsCard from '../components/UserDetailsCard';
 import '../App.css';
-import { Link } from 'react-router-dom';
+import HomeLoanCard from '../components/HomeLoanCard';
 
 class Dashboard extends React.Component{
     render(){
         const{userData}=this.props;
         return(
-            userData?<div className="content-wrapper">
+            userData?<div className="content-wrapper">{console.log(userData.homeLoans)}
                 <h1 className="message">Welcome {userData.userName} &nbsp;</h1>
-                <UserDetailsCard {...userData}/>
+                <UserDetailsCard  {...userData}/>
+                <div className="card">
+                {userData.homeLoans.length>0 && userData.homeLoans.map((data)=>{
+                    return <HomeLoanCard {...data}/>
+                })}
+                </div>
+                
             </div>
             :
             <div><h1>Please Login with User ID</h1></div>

@@ -2,23 +2,33 @@
     justify-content: center;
     display: flex;
     width: 100%;
+    grid-area: content;
+    overflow:hidden;
 }
 .ETableCellText{
     background-color: midnightblue;
     color: white !important;
     font-size: 16px !important;
+    border-radius: 5px;
 }
 .ETableCellVal{
     text-align: right !important;
     font-size: 18px !important;
+    
 }
 .CalApp{
-    width: 50%;
-    border: 2px #CCC solid;
+    width: 60%;
+    /* border: 2px #CCC solid; */
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 10px;
-    background-color :peachpuff;
+    background-color: #F6F7FF;
+    grid-area: content;
+    overflow:auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px 0px rgba(35,35,56,0.75);
+    -webkit-box-shadow: 2px 4px 10px 0px rgba(35,35,56,0.75);
+    -moz-box-shadow: 2px 4px 10px 0px rgba(35,35,56,0.75);
 }
 .CalHeading{
     text-align: center;

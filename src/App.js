@@ -11,7 +11,6 @@ import LoanDetails from './pages/LoanDetials';
 import axios from 'axios';
 import {API} from './constants';
 import './App.css';
-import EMI from './pages/EmiCalculator';
 import EmiCalculator from './pages/EmiCalculator';
 
 class  App extends React.Component{

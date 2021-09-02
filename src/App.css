@@ -10,7 +10,6 @@
  .wrapper {
   background-color: #F6F7FF;
   display: grid;
-  height:96vh;
   grid-gap:12px;
   padding: 12px;
   grid-template-columns: min-content 5fr;
@@ -27,4 +26,8 @@
  .message{
    text-align: center;
    
+ }
+ .card{
+   display: flex;
+   flex-direction: row;
  }

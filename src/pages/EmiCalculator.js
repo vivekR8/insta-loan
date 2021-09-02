@@ -45,7 +45,7 @@ function EmiCalculator()
             </div>
             </div>
             <div>
-                <Table>
+                <Table >
                     <TableRow>
                         <TableCell>
                             <TableDetails pAmount={pAmount} totalAmt={totalAmt} interest={interest} duration={duration} emi={emi} ToatalAmountOfInterest={ToatalAmountOfInterest}></TableDetails>
