@@ -48,7 +48,7 @@ class  App extends React.Component{
                   <Route exact path="/loan-details" ><LoanDetails valueId={100}/></Route>
                   <Route exact path="/apply-loan" component={Dashboard}/>
                   <Route exact path="/loan-status" component={Dashboard}/>
-                  <Route exact path="/emi-calculator" component={Dashboard}/>
+                  <Route exact path="/emi-calculator" component={EmiCalculator}/>
               </div>
           </Router>
         :
