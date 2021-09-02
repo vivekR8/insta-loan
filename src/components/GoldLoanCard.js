@@ -48,26 +48,29 @@ const useStyles = makeStyles({
 export default function GoldLoanCard(props) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>:  </span>;
-    console.log("card",props.userData)
+    
   return (
     <Card className={classes.root}>
-        <h2 className={classes.h2}>Home Loan</h2>
+        <h2 className={classes.h2}>Gold Loan</h2>
         <span className={classes.wrap}>
             
             <CardContent>
                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                        <div className={classes.pad}>UserId  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>UserId  
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
                         {bull}
                         <div>{props.userId}</div>
                     </Typography>
                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                        <div className={classes.pad}>Loan ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>Loan ID  
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div>
                         {bull}
                         <div>{props.loanDebtId}</div>
                     </Typography>
                     
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>Amount &nbsp;</div>
+                        <div className={classes.pad}>Amount 
+                        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div>
                         {bull}
                         <div>{props.loanAmt}</div>
                     </Typography>
@@ -77,23 +80,24 @@ export default function GoldLoanCard(props) {
                         <div>{props.startDate}</div>
                     </Typography>
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>End Date &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>End Date &nbsp; &nbsp;&nbsp;&nbsp;</div>
                         {bull}
                         <div>{props.endDate}</div>
                     </Typography>
                     <Typography className={classes.pos} variant="body2" component="p">
                         <div className={classes.pad}>Gold Amount &nbsp;&nbsp;</div>
                         {bull}
-                        <div>Gold Ammount :{props.goldAmt}
+                        <div>{props.goldAmt}
                         </div>
                     </Typography>
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>Interest</div>
+                        <div className={classes.pad}>Interest &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div>
                         {bull}
                         <div>{props.interest}</div>
                     </Typography>
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>Status 
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</div>
                         {bull}
                         <div>{props.loanStatus}</div>
                     </Typography>

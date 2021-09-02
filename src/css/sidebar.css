@@ -1,12 +1,12 @@
 .Sidebar{
     height: 100vh;
-    width: 250px;
+    width: 30vh;
     background-color: #2F4050;
     border-radius: 5px;
 }
 
 .SidebarList{
-    
+    height: auto;
     padding: 0%;
     width: 100%;
 }
