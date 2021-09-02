@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.SidebarList .row:hover{
+.SidebarList :hover{
     cursor: pointer;
     background-color: #293846;
 }

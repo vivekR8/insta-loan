@@ -7,28 +7,53 @@ import {
 } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
 import Sidebar from './components/SideBar';
-// import LoanDetails from './pages/LoanDetials';
+import LoanDetails from './pages/LoanDetials';
+import axios from 'axios';
+import {API} from './constants';
 import './App.css';
 import EMI from './pages/EmiCalculator';
 import EmiCalculator from './pages/EmiCalculator';
 
 class  App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
+      isLoggedIn:false,
+      type:"admin",
+      userData:null,
+      userId:0
+    };
+  }
+
+ getUserDetails=()=>{
+   const {userId}=this.state;
+   console.log(userId);
+   axios.get(`${API}/user/${userId}`).then(
+      (res)=>{
+      this.setState({userData:res.data})
+    }).catch((err)=>console.log(err))
+ }
 
   render(){
+    const {userData}=this.state;
+    console.log(userData,"response")
   return (
     <div className="App">
-      <Router>
-          <div >
-              
-              <Sidebar />
-              {/* <LoanDetails value={"hi"} valueid={101}/> */}
-              <Route exact path="/" component={Dashboard}/>
-              <Route exact path="/loan-details" component={Dashboard}/>
-              <Route exact path="/apply-loan" component={Dashboard}/>
-              <Route exact path="/loan-status" component={Dashboard}/>
-              <Route exact path="/emi-calculator" component={EmiCalculator}/>
-          </div>
-      </Router>
+      {this.state.isLoggedIn?
+          <Router>
+              <div className="wrapper">
+                  
+                  <Sidebar />
+                  <Route exact path="/"><Dashboard userData={userData} /></Route>
+                  <Route exact path="/loan-details" ><LoanDetails valueId={100}/></Route>
+                  <Route exact path="/apply-loan" component={Dashboard}/>
+                  <Route exact path="/loan-status" component={Dashboard}/>
+                  <Route exact path="/emi-calculator" component={Dashboard}/>
+              </div>
+          </Router>
+        :
+        <button onClick={()=>{this.setState({isLoggedIn:true,userId:134},()=>this.getUserDetails())}}>LOG IN</button>
+        }
     </div>
   );
   }

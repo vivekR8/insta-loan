@@ -7,3 +7,24 @@
    padding: 0;
  }
 
+ .wrapper {
+  background-color: #F6F7FF;
+  display: grid;
+  height:96vh;
+  grid-gap:12px;
+  padding: 12px;
+  grid-template-columns: min-content 5fr;
+  grid-template-areas: "sidebar content";
+ }
+
+ .wrapper .content-wrapper {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 100px;
+ }
+ .message{
+   text-align: center;
+   
+ }
