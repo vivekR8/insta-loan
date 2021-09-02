@@ -56,18 +56,21 @@ export default function UserDetailsCard(props) {
             
             <CardContent>
                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                        <div className={classes.pad}>UserId  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>UserId  
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
                         {bull}
                         <div>{props.userId}</div>
                     </Typography>
                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                        <div className={classes.pad}>Loan ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>Loan ID  
+                        &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;</div>
                         {bull}
                         <div>{props.loanDebtId}</div>
                     </Typography>
                     
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>Amount &nbsp;</div>
+                        <div className={classes.pad}>Amount 
+                        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </div>
                         {bull}
                         <div>{props.loanAmt}</div>
                     </Typography>
@@ -77,7 +80,7 @@ export default function UserDetailsCard(props) {
                         <div>{props.startDate}</div>
                     </Typography>
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>End Date &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>End Date &nbsp; &nbsp;&nbsp;&nbsp;</div>
                         {bull}
                         <div>{props.endDate}</div>
                     </Typography>
@@ -85,7 +88,8 @@ export default function UserDetailsCard(props) {
 
 
                     <Typography className={classes.pos} variant="body2" component="p">
-                        <div className={classes.pad}>Vehicle Type &nbsp;&nbsp;</div>
+                        <div className={classes.pad}>Vehicle Type 
+                        &nbsp;&nbsp;&nbsp;</div>
                         {bull}
                         <div>{props.vehicleType}</div>
                     </Typography>
@@ -99,12 +103,15 @@ export default function UserDetailsCard(props) {
 
 
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>Interest</div>
+                        <div className={classes.pad}>Interest
+                        &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                        </div>
                         {bull}
                         <div>{props.interest}</div>
                     </Typography>
                     <Typography className={classes.pos} >
-                        <div className={classes.pad}>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div className={classes.pad}>Status 
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</div>
                         {bull}
                         <div>{props.loanStatus}</div>
                     </Typography>

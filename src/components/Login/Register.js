@@ -3,8 +3,26 @@ import React from "react";
 export class Register extends React.Component {
   constructor(props) {
     super(props);
+    this.state={
+      userName:'',
+      contact:'',
+      email:'',
+      address:'',
+      city:'',
+      accountNo:'',
+      panNo:'',
+      creditScore:5,
+    }
   }
+  createUser=()=>{
+    const payload={...this.state}
+    console.log(payload);
+  }
+  handleChange=(event)=>{
+    this.setState({[event.target.name]:event.target.value})
+    console.log(event.target.name)
 
+  }
   render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
@@ -16,35 +34,35 @@ export class Register extends React.Component {
               <div className="form">
               <div className="left-form">
                   <div className="form-group">
-                    <label htmlFor="username">Username</label>
-                    <input type="text" name="username" placeholder="username" />
+                    <label htmlFor="userName">Username</label>
+                    <input onChange={this.handleChange} type="text" name="userName" placeholder="username" required/>
                   </div>
                   <div className="form-group">
                     <label htmlFor="contact">Contact</label>
-                    <input type="text" name="contact" placeholder="contact" />
+                    <input onChange={this.handleChange} type="text" name="contact" placeholder="contact" required />
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="text" name="email" placeholder="email" />
+                    <input onChange={this.handleChange} type="text" name="email" placeholder="email" required/>
                   </div>
                   <div className="form-group">
                     <label htmlFor="address">Address</label>
-                    <input type="text" name="address" placeholder="address" />
+                    <input onChange={this.handleChange} type="text" name="address" placeholder="address" />
                   </div>
                 </div>
                 <div>
                   <div>
                       <div className="form-group">
                         <label htmlFor="city">City</label>
-                        <input type="text" name="city" placeholder="city" />
+                        <input onChange={this.handleChange} type="text" name="city" placeholder="city" />
                       </div>
                       <div className="form-group">
-                        <label htmlFor="accNo">Account No.</label>
-                        <input type="text" name="accNo" placeholder="accNo" />
+                        <label htmlFor="accountNo">Account No.</label>
+                        <input onChange={this.handleChange} type="text" name="accountNo" placeholder="accNo" required/>
                       </div>
                       <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input type="text" name="password" placeholder="password" />
+                        <label htmlFor="userId">Password</label>
+                        <input onChange={this.handleChange} type="text" name="userId" placeholder="password" required/>
                       </div>
                   </div>
                 </div>
@@ -53,7 +71,7 @@ export class Register extends React.Component {
 
         </div>
         <div className="footer">
-          <button type="button" className="btn">
+          <button onClick={this.createUser} type="button" className="btn">
             Register
           </button>
         </div>

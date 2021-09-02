@@ -1,18 +1,24 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import CurrencyInput from 'react-currency-input-field';
 
 const Example = (props) => {
+  const [checkbox,setCheckbox]=useState("");
+  const handleSubmit=(event)=>{
+    event.preventDefault();
+    console.log(event.target.userid.value);
+    
+  }
   return (
-    <Form style={{marginLeft: "30px", marginRight: "30px",marginTop: "30px"}}>
+    <Form onSubmit={handleSubmit} style={{marginLeft: "30px", marginRight: "30px",marginTop: "30px"}}>
       <FormGroup style={{margin: "10px", display: "flex", justifyContent: "space-between", width: "38%"}}>
         <Label for="userid">User ID : </Label>
-        <Input type="text" name="text" id="userid" placeholder="Enter User Id" />
+        <Input type="text" name="userid" id="userid" placeholder="Enter User Id" />
       </FormGroup>
 
       <FormGroup style={{margin: "10px", display: "flex", justifyContent: "space-between", width: "38%"}}>
         <Label for="username">User Name : </Label>
-        <Input type="text" name="text" id="username" placeholder="Enter User Name" />
+        <Input type="text" name="username" id="username" placeholder="Enter User Name" />
       </FormGroup>
 
       <FormGroup tag="fieldset" style={{width:"600px"}}>
@@ -103,7 +109,7 @@ const Example = (props) => {
       </FormGroup>
       
       <div style={{margin: "10px", display: "flex", justifyContent: "center", width: "100%"}}>
-      <Button style={{ backgroundColor: "#2F4050",borderRadius: "5px", fontSize: "initial", 
+      <Button  style={{ backgroundColor: "#2F4050",borderRadius: "5px", fontSize: "initial", 
                         boxShadow: "2px 2px 2px grey", padding: "4px 25px", color:"white",fontFamily: "sans-serif"}}>SUBMIT</Button>{' '}
       </div>
     </Form>
