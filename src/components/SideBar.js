@@ -7,7 +7,7 @@ function Sidebar(){
 
     return <div 
     className="Sidebar"
-    style={{width:'30%'}}
+    style={{width:'20%'}}
     >
         <ul 
         className="SidebarList">

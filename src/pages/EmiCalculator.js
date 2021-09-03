@@ -27,35 +27,37 @@ function EmiCalculator()
     var ToatalAmountOfCredit=Math.round((emi/intr)*(1-Math.pow((1+intr),(-duration))));
     const ToatalAmountOfInterest=Math.round(totalAmt-ToatalAmountOfCredit);
     return(
-        <div className="Emi">
-            <div className="CalApp">
-                <h2 className="CalHeading"><u>Emi Calculator</u></h2>
-            <div>
-                <Typography gutterBottom><strong>Loan Amount</strong></Typography>
-                <PrettoSlider value={pAmount} marks={SliderMarks.marksAmt} onChange={(event,vAmt)=>{setpAmount(vAmt)}}defaultValue={pAmount} max={maxValue} valueLabelDisplay="auto"/>
-            </div>
-            <div>
-                 <Typography gutterBottom><strong>Interest Rate %</strong></Typography>
-                 <PrettoSlider value={interest} marks={SliderMarks.marksInt}onChange={(event,vInt)=>{setinterest(vInt);}}defaultValue={interest} max={intMax} valueLabelDisplay="auto"/>
-            </div>
-            <div>
-                 <Typography gutterBottom><strong>Tenure (Months)</strong></Typography>
-                 <PrettoSlider value={duration} marks={SliderMarks.marksTenure} onChange={(event,vDur)=>{setDuration(vDur);}}defaultValue={duration} max={maxDuration} valueLabelDisplay="auto"/>
+        //<div className="content-wrapper">
+            <div className=" Emi " style={{paddingLeft:"20px"}}>
+                <div className="CalApp">
+                    <h2 className="CalHeading"><u>Emi Calculator</u></h2>
+                <div>
+                    <Typography gutterBottom><strong>Loan Amount</strong></Typography>
+                    <PrettoSlider value={pAmount} marks={SliderMarks.marksAmt} onChange={(event,vAmt)=>{setpAmount(vAmt)}}defaultValue={pAmount} max={maxValue} valueLabelDisplay="auto"/>
+                </div>
+                <div>
+                    <Typography gutterBottom><strong>Interest Rate %</strong></Typography>
+                    <PrettoSlider value={interest} marks={SliderMarks.marksInt}onChange={(event,vInt)=>{setinterest(vInt);}}defaultValue={interest} max={intMax} valueLabelDisplay="auto"/>
+                </div>
+                <div>
+                    <Typography gutterBottom><strong>Tenure (Months)</strong></Typography>
+                    <PrettoSlider value={duration} marks={SliderMarks.marksTenure} onChange={(event,vDur)=>{setDuration(vDur);}}defaultValue={duration} max={maxDuration} valueLabelDisplay="auto"/>
 
-            </div>
-            </div>
-            <div>
-                <Table >
-                    <TableRow>
-                        <TableCell>
-                            <TableDetails pAmount={pAmount} totalAmt={totalAmt} interest={interest} duration={duration} emi={emi} ToatalAmountOfInterest={ToatalAmountOfInterest}></TableDetails>
-                        </TableCell>
-                    </TableRow>
+                </div>
+                </div>
+                <div>
+                    <Table >
+                        <TableRow>
+                            <TableCell>
+                                <TableDetails pAmount={pAmount} totalAmt={totalAmt} interest={interest} duration={duration} emi={emi} ToatalAmountOfInterest={ToatalAmountOfInterest}></TableDetails>
+                            </TableCell>
+                        </TableRow>
 
-                </Table>
+                    </Table>
+                </div>
+                    
             </div>
-                
-        </div>
+        //</div>
     );
 }
 
