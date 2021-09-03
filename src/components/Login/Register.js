@@ -1,5 +1,7 @@
+import axios from "axios";
 import React from "react";
-
+import {API} from '../../constants';
+import {browserHistory} from 'react-router'
 export class Register extends React.Component {
   constructor(props) {
     super(props);
@@ -17,10 +19,16 @@ export class Register extends React.Component {
   createUser=()=>{
     const payload={...this.state}
     console.log(payload);
+    axios.post(`${API}/user`,payload).then((res)=>{
+      //res.status==201?
+    }).catch((err)=>{
+      console.log(err)
+    })
   }
   handleChange=(event)=>{
     this.setState({[event.target.name]:event.target.value})
     console.log(event.target.name)
+    console.log(event.target.value)
 
   }
   render() {
@@ -55,6 +63,10 @@ export class Register extends React.Component {
                       <div className="form-group">
                         <label htmlFor="city">City</label>
                         <input onChange={this.handleChange} type="text" name="city" placeholder="city" />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="panNo">Pan No.</label>
+                        <input onChange={this.handleChange} type="text" name="panNo" placeholder="panNo" />
                       </div>
                       <div className="form-group">
                         <label htmlFor="accountNo">Account No.</label>
