@@ -1,34 +1,39 @@
-.App {
-  width: 100vw;
-  height: 100vh;
-  
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #F6F7FF;
 }
-.route{
+.App {
+  
+  height: 100vh;
+  width: 100vw;
+  
+
+}
+
+ 
+ .route{
   display: flex;
   flex-direction: row;
 }
- body{
-   margin: 0;
-   padding: 0;
- }
-
  .wrapper {
-  background-color: #F6F7FF;
   display: grid;
   grid-gap:12px;
   padding: 12px;
   width: 100%;
+  padding-left: 50px;
+  
   grid-template-columns: min-content 5fr;
   grid-template-areas: "sidebar content";
-  overflow: auto;
  }
 
  .wrapper .content-wrapper {
   
   display: flex;
   flex-direction: column;
-  overflow: auto;
-  padding-left: 100px;
+  justify-self:center;
+  width: 100%;
+  grid-area: content;
   
  }
  .message{
@@ -38,4 +43,5 @@
  .card{
    display: flex;
    flex-direction: row;
+   flex-flow: row wrap;
  }
